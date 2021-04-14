@@ -1,0 +1,33 @@
+Diccionario: Dam, modulo, titlulo, contenido, unidad.
+
+Reglas: Dam tiene varios módulos, un módulo DAM un solo elemento de título y un contenido ,
+	el contenido tiene varias unidades. Las unidades contienen texto, y sólo una unidad se puede colocar detrás de una unidad. 
+	Un módulo sólo se puede colocar detrás de un módulo.
+	
+<dam>
+    <modulo>
+        <titulo>Bases de datos</titulo>
+        <contenido>
+            <unidad>Modelo entidad relacion</unidad>
+            <unidad>Paso a tablas</unidad>
+			<unidad>Normalizacion</unidad>
+        </contenido>
+       </modulo>
+    <modulo>
+        <titulo>Programacion</titulo>
+        <contenido>
+			<unidad>Bases de la programacion</unidad>
+            <unidad>C y C++</unidad>
+			<unidad>Phyton</unidad>
+			<unidad>Java</unidad>
+        </contenido>
+    </modulo>
+	<modulo>
+        <titulo>Sistemas informaticos</titulo>
+        <contenido>
+            <unidad>Comandos MS-Dos</unidad>
+			<unidad>Linux</unidad>
+			<unidad>Instalacion de paquetes en modo comando</unidad>
+        </contenido>
+    </modulo>
+</dam>

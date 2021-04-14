@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <xs:element name="factura" type="tipoFactura" />
+
+  <xs:complexType name="tipoFactura">
+    <xs:sequence>
+      <xs:element name="datos_empresa" type="tipoDatos_empresa" />
+      <xs:element name="datos_cliente" type="tipoDatos_cliente" />
+      <xs:element name="datos_factura" type="tipoDatos_factura" />
+    </xs:sequence>
+    <xs:attribute name="n_fac" type="xs:string" />
+  </xs:complexType>
+
+  <xs:complexType name="tipoDatos_empresa">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string" />
+      <xs:element name="dir" type="xs:string" />
+      <xs:element name="poblacion" type="tipo_poblacion" />
+      <xs:element name="provincia" type="xs:string" />
+      <xs:element name="cif" type="xs:string" />
+      <xs:element name="telefono" minOccurs="0" fixed="917776688"/>
+      <xs:element name="fax" minOccurs="0" fixed="917776699"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tipo_poblacion">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="cod_postal" type="tipoAtbCodPostal" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="tipoAtbCodPostal">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:totalDigits value="5" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="tipoDatos_cliente">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string" />
+      <xs:element name="dir_env" type="xs:string" />
+      <xs:element name="poblacion" type="tipo_poblacion" />
+      <xs:element name="provincia" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute name="n_cli" type="tipoAtbNcli" />
+  </xs:complexType>
+
+  <xs:simpleType name="tipoAtbNcli">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:totalDigits value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="tipoDatos_factura">
+    <xs:sequence>
+      <xs:element name="fecha" type="xs:date" />
+      <xs:element name="linea" type="tipoLinea" maxOccurs="unbounded" />
+      <xs:element name="base" type="tipo2decimal" />
+      <xs:element name="cuota_iva" type="tipo2decimal" />
+      <xs:element name="total" type="tipoPrecio" />
+    </xs:sequence>
+    <xs:attribute name="n_ped" type="tipoAtbNped" />
+    <xs:attribute name="iva" type="tipoAtbIva" />
+    <xs:attribute name="f_pago" type="tipoAtbFpago" />
+    <xs:attribute name="moneda" type="xs:string" fixed="euro" />
+  </xs:complexType>
+
+  <xs:simpleType name="tipoPrecio">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="7" />
+      <xs:fractionDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tipoDesc">
+    <xs:restriction base="xs:string">
+    <xs:minLength value="1"/>
+    <xs:maxLength value="100"/>
+    </xs:restriction>
+    </xs:simpleType> 
+
+  <xs:simpleType name="tipo2decimal">
+    <xs:restriction base="xs:decimal">
+      <xs:fractionDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="tipoLinea">
+    <xs:sequence>
+      <xs:element name="ref" type="xs:string" />
+      <xs:element name="desc" type="tipoDesc" />
+      <xs:element name="cant" type="xs:positiveInteger" />
+      <xs:element name="precio" type="tipoPrecio" />
+      <xs:element name="importe" type="tipoPrecio" />
+    </xs:sequence>
+    <xs:attribute name="n_cli" type="tipoAtbNcli" />
+  </xs:complexType>
+
+  <xs:simpleType name="tipoAtbNped">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:totalDigits value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tipoAtbIva">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:totalDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tipoAtbFpago">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="efectivo" />
+      <xs:enumeration value="tarjeta" />
+      <xs:enumeration value="plazos" />
+    </xs:restriction>
+  </xs:simpleType>
+
+
+</xs:schema>

@@ -1,0 +1,9 @@
+1 - /ies/nombre
+2 - //web/text()
+3 - //ciclo/nombre/text()
+4 - //ciclo/@id
+5 - //ciclo/decretoTitulo/@año
+6 - //ciclo[@id = "SMR"]
+7 - //ciclo[grado="Superior"]/nombre
+8 - //decretoTitulo[@año<2010]/../nombre/text()
+9 - //decretoTitulo[@año=2010 or @año=2008]/../nombre/text()

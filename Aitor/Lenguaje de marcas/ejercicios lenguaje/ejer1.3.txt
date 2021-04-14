@@ -1,0 +1,39 @@
+Diccionario: Gimnasio, Deporte, Nombre, Descripcion, Horario
+
+Reglas: Tenemos un gimnasio que tiene varios deportes, entre ellos especificamos el nombre, la descripcion y el horario, dentro del horario tenemos los dias de la semana con sus respectivas horas.
+
+<gimnasio>
+	<deporte>
+		<nombre>CrossFit</nombre>
+		<descripcion>El CrossFit es un método de entrenamiento basado en ejercicios constantemente variados, con movimientos funcionales ejecutados a alta intensidad.</descripcion>
+		<horario>
+			<lunes>10:00 - 11:00</lunes>
+			<martes>17:00 - 18:00</martes>
+			<miercoles>11:00 - 12:00</miercoles>
+			<jueves>18:00 - 19:00</jueves>
+			<Viernes>10:00 - 11:00</viernes>
+		</horario>
+	</deporte>
+	<deporte>
+		<nombre>Calistenia</nombre>
+		<descripcion>La calistenia es un sistema de ejercicios físicos con el propio peso corporal.</descripcion>
+		<horario>
+			<lunes>10:00 - 11:00</lunes>
+			<martes>17:00 - 18:00</martes>
+			<miercoles>11:00 - 12:00</miercoles>
+			<jueves>18:00 - 19:00</jueves>
+			<Viernes>10:00 - 11:00</viernes>
+		</horario>
+	</deporte>
+	<deporte>
+		<nombre>Zumba</nombre>
+		<descripcion>Zumba enfocada por una parte a mantener un cuerpo saludable y por otra a desarrollar, fortalecer y dar flexibilidad al cuerpo mediante movimientos de baile combinados con una serie de rutinas aeróbicas.</descripcion>
+		<horario>
+			<lunes>10:00 - 11:00</lunes>
+			<martes>17:00 - 18:00</martes>
+			<miercoles>11:00 - 12:00</miercoles>
+			<jueves>18:00 - 19:00</jueves>
+			<Viernes>10:00 - 11:00</viernes>
+		</horario>
+	</deporte>
+</gimnasio>

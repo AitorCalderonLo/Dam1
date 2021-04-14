@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE inventores [
+
+  <!ELEMENT inventores (inventor*)>
+
+  <!ELEMENT inventor EMPTY>
+
+  <!ATTLIST inventor invento CDATA #REQUIRED>
+
+  <!ATTLIST inventor nombre ID #REQUIRED>
+
+]>
+
+
+
+<inventores>
+
+  <inventor nombre="R1" invento="Mando a distancia" />
+
+  <inventor nombre="R2" invento="Bolígrafo" />
+
+  <inventor nombre="R3" invento="Lavaplatos" />
+
+  <inventor nombre="R4" invento="Fuego" />
+
+</inventores>

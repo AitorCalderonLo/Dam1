@@ -1,0 +1,32 @@
+*{
+  font-family: calibri, arial, helvetica, sans-serif;
+
+}
+h2,h1{font-family: cambria, "times new roman", serif;}
+
+h1{
+  color: #1F497D;
+  background-color: #BFBFBF;
+  font-size: 24px;
+  letter-spacing: 0.5em;
+  word-spacing: 1.5em;
+  text-align: center;
+  text-transform: uppercase;
+}
+h2{
+  color: #632423;
+  font-size: 18px;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+}
+li{
+  font-weight: bold;
+  text-transform: capitalize;
+  font-style: italic;
+
+}
+strong{
+  font-weight: normal;
+  font-variant: small-caps;
+  font-style: normal;
+}

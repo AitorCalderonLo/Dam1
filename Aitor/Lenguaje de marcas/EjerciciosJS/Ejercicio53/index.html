@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="es-ES">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio53</title>
+  <script src="code.js"></script>
+</head>
+
+<body>
+  <h1>Tabla de cobros</h1>
+  <form action="javascript:pulsadoGuardar()" method="post">
+
+    <table>
+      <tr>
+        <td><label for="numcompra">Numero de compra:</label></td>
+        <td><input type="text" id="numcompra" value="" readonly></td>
+      </tr>
+      <tr>
+        <td><label for="iva">IVA: %</label></td>
+        <td><input type="text" id="iva" value="" required pattern="[0-9]{1,2}" title="Iva minimo 1 y maximo 99"></td>
+      </tr>
+      <tr>
+        <td><label for="producto">Producto: </label></td>
+        <td>
+          <select name="producto" id="producto" required>
+            <option value="chaqueta">Chaqueta</option>
+            <option value="camiseta">Camiseta</option>
+            <option value="falda">Falda</option>
+            <option value="calcetines">Calcetines</option>
+            <option value="zapatos">Zapatos</option>
+            <option value="abrigo">Abrigo</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="cant">Cantidad: </label></td>
+        <td><input type="text" id="cant" value="" required pattern="[0-9]{1,2}" title="Cantidad minima 1 y maxima 99"></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <input type="submit" id="btnGuardar" value="Guardar">
+        </td>
+      </tr>
+    </table>
+  </form>
+  <br>
+
+  <label for="ticket">Ticket: </label><br>
+  <textarea name="name" id="ticket" rows="12" cols="100" readonly></textarea>
+  <br>
+  <button type="button" name="btnGenerarFact" onclick="generarFact()">Generar Factura</button>
+  <div class="c" id="cambiar">
+
+  </div>
+
+
+</body>
+
+</html>

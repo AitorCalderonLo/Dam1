@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<desayunos>
+  <desayuno>
+      <nombre>Gofre Belga</nombre>
+      <precio>5.95</precio>
+      <calorias>650</calorias>
+      <descripcion>Nuestro famoso gofre con dos siropes diferentes</descripcion>
+  </desayuno>
+  <desayuno>
+      <nombre>Gofre Belga con fresas</nombre>
+      <precio>7.95</precio>
+      <calorias>650</calorias>
+      <descripcion>Harina de gofre belga , fresas  y nata</descripcion>
+  </desayuno>
+  <desayuno>
+      <nombre>Gofre Belga con frutos del bosque</nombre>
+      <precio>8.95</precio>
+      <calorias>900</calorias>
+      <descripcion>Frutos del bosque y nata con gofre belga</descripcion>
+  </desayuno>
+  <desayuno>
+      <nombre>Pan tostado de la granja</nombre>
+      <precio>4.50</precio>
+      <calorias>600</calorias>
+      <descripcion>Dos gruesas rebanadas de pan en la granja.</descripcion>
+  </desayuno>
+  <desayuno>
+      <nombre>Dos gruesas rebanadas de pan en la granja.</nombre>
+      <precio>6.95</precio>
+      <calorias>950</calorias>
+      <descripcion>Dos huevos fritos, bacon o salchicha, pan tostado y patatas fritas</descripcion>
+  </desayuno>
+
+</desayunos>

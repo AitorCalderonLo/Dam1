@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE lfp [
+
+  <!ELEMENT lfp (partido*)>
+  
+  <!ELEMENT partido (local,visitante,goleslocal,golesvisitante)>
+  
+    <!ELEMENT local (#PCDATA)>
+      <!ELEMENT visitante (#PCDATA)>
+        <!ELEMENT goleslocal (#PCDATA)>
+          <!ELEMENT golesvisitante (#PCDATA)>
+
+]>
+
+<lfp>
+  <partido>
+    <local>Nottingham Prisa</local>
+    <visitante>Inter de Mitente</visitante>
+    <goleslocal>0</goleslocal>
+    <golesvisitante>1</golesvisitante>
+  </partido>
+  
+    <partido>
+    <local>Vodka Juniors</local>
+    <visitante>Sparta da Risa</visitante>
+    <goleslocal>3</goleslocal>
+    <golesvisitante>3</golesvisitante>
+  </partido>
+  
+    <partido>
+    <local>Water de Munich</local>
+    <visitante> Esteaua es del grifo</visitante>
+    <goleslocal>4</goleslocal>
+    <golesvisitante>2</golesvisitante>
+  </partido>
+</lfp>
+
+

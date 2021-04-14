@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <xs:element name="alumnos" type="tipoAlumnos" />
+
+  <xs:complexType name="tipoAlumnos">
+    <xs:sequence>
+      <xs:element name="alumno" type="tipoAlumno" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tipoAlumno">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string" />
+      <xs:element name="direccion" type="tipoDireccion" />
+      <xs:choice>
+        <xs:element name="telefono" type="tipoTel" minOccurs="0" />
+        <xs:element name="movil" type="tipoTel" minOccurs="0" maxOccurs="3" />
+      </xs:choice>
+      <xs:element name="email" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="minusvalia" type="tipoMinusvalia" minOccurs="0" maxOccurs="1" />
+
+    </xs:sequence>
+    <xs:attribute name="dni" type="tipoNif" use="required" />
+    <xs:attribute name="repetidor" type="xs:boolean" default="false" />
+    <xs:attribute name="fechaNacimiento" type="xs:date" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="tipoMinusvalia">
+    <xs:attribute name="grado" type="tipoGrado" use="required"/>
+  </xs:complexType>
+
+  <xs:simpleType name="tipoGrado">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="([0-9]{1}|[0-9]{2})%"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:complexType name="tipoDireccion">
+    <xs:sequence>
+      <xs:element name="calle" type="tipoCalle" />
+      <xs:element name="numero" type="tipoNumero" />
+      <xs:element name="ciudad" type="tipoCiudad" />
+      <xs:element name="provincia" type="tipoCiuProv" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tipoCiudad">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="codPostal" type="tipocodPostal" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="tipocodPostal">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:pattern value="[0-9]{5}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tipoNif">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{8}([A-Z]|[a-z])"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tipoTel">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:pattern value="[0-9]{9}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tipoCiuProv">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tipoNumero">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="1000" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tipoCalle">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="calle" />
+      <xs:enumeration value="carretera" />
+      <xs:enumeration value="camino" />
+      <xs:enumeration value="plaza" />
+      <xs:enumeration value="avenida" />
+      <xs:enumeration value="travesia" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

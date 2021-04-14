@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio19</title>
+  </head>
+  <body>
+
+    <form class="formulario1" action="mailto:aitor.calderonlo@elorrieta-errekamari.com" method="post">
+      <fieldset id="datospersona">
+        <legend>Datos personales</legend>
+        <table>
+          <tr>
+            <td>
+              <label for="apellidos"><strong>Apellidos</strong></label><br>
+              <input id="apellidos" type="text" maxlength="40" name="apellidos" size="40" accesskey="a">
+            </td>
+            <td>
+              <label for="nombre"><strong>Nombre</strong></label><br>
+              <input id="nombre" type="text" maxlength="18" name="nombre" size="18" accesskey="i">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="dni"><strong>DNI</strong></label>
+              <input id="dni" type="text" maxlength="11" name="dni" size="11" accesskey="n">
+            </td>
+            <td>
+              <label for="ciunac"><strong>Ciudad Nacimiento</strong></label>
+              <input id="ciunac" type="text" maxlength="29" name="ciunac" size="29" accesskey="j">
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <label for="fnac"><strong>Fecha Nacimiento</strong></label>
+              <input id="fnac" type="date" name="fnac" size="8" accesskey="d">
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <fieldset id="datosvivienda">
+        <legend>Datos</legend>
+        <table>
+          <tr>
+            <td>
+              <label for="tipo_direccion"><strong>Direcci&oacute;n</strong></label>
+              <select id="tipo_direccion" name="tipo_direccion" accesskey="m">
+                <option value="calle" selected="selected">calle</option>
+                <option value="plaza">plaza</option>
+                <option value="avenida">avenida</option>
+                <option value="barrio">barrio</option>
+                <option value="camino">camino</option>
+                <option value="carretera">carretera</option>
+              </select>
+              <input type="text" maxlength="55" name="direccion" size="55" accesskey="h">
+            </td>
+            <td>
+              <label for="cp"><strong>C&oacute;digo postal</strong></label>
+              <input id="cp" type="text" maxlength="5" name="cp" size="5" accesskey="p">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="ciudad"><strong>Ciudad</strong></label><br>
+              <input id="ciudad" type="text" maxlength="25" name="ciudad" size="25" accesskey="r">
+
+              <label for="provincia"><strong>Provincia</strong></label>
+              <select id="provincia" name="provincia">
+                <option value="bizkaia">Bizkaia</option>
+                <option value="araba">Araba</option>
+                <option value="gipuzkoa">Gipuzkoa</option>
+              </select>
+            </td>
+            <td>
+              <label for="telefono"><strong>Tel&eacute;fono</strong></label>
+              <input id="telefono" type="text" maxlength="9" name="telefono" size="9" accesskey="t">
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="http://validator.w3.org/check?uri=referer" target="_blank">
+                <img alt="Valid XHTML 1.0 Strict" src="http://www.w3.org/Icons/valid-xhtml10" width="88" height="31">
+              </a>
+            </td>
+            <td>
+              <input type="submit" name="submit" value="Enviar">
+              <input type="reset" name="reset" value="Borrar">
+            </td>
+          </tr>
+
+        </table>
+      </fieldset>
+    </form>
+
+  </body>
+</html>

@@ -1,0 +1,42 @@
+#titulo{
+  color: teal;
+}
+
+strong,a,th{
+  color: red;
+}
+
+.destacado,td strong{
+  color: orange;
+}
+
+a em,caption{
+  color: blue;
+}
+
+span.especial{
+  color: purple;
+}
+
+#especial{
+  color: fuchsia;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 0.3em;
+}
+
+td{
+  color: green;
+}
+
+#adicional p{
+  color: olive;
+}
+
+a:last-child{
+  color: green;
+  text-decoration: underline;
+}

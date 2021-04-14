@@ -1,0 +1,16 @@
+.contenido{
+  border-style: groove;
+  padding: 0.5%;
+}
+
+ul{
+
+  list-style: none;
+
+}
+
+
+
+.titulo{
+  font-weight: bolder;
+}

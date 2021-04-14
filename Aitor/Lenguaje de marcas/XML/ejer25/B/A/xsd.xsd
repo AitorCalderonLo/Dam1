@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <xs:element name="alumnos" type="tipoAlumnos" />
+
+  <xs:complexType name="tipoAlumnos">
+    <xs:sequence>
+      <xs:element name="alumno" type="tipoAlumno" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tipoAlumno">
+    <xs:sequence>
+      <xs:element name="dni" type="xs:string" />
+      <xs:element name="nombre" type="xs:string" />
+      <xs:element name="direccion" type="tipoDireccion" />
+      <xs:element name="telefono" type="xs:string" minOccurs="1" maxOccurs="2"/>
+      <xs:element name="email" type="xs:string" minOccurs="0" maxOccurs="1"/>
+
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tipoDireccion">
+    <xs:sequence>
+      <xs:element name="calle" type="xs:string" />
+      <xs:element name="numero" type="xs:string" />
+      <xs:element name="ciudad" type="xs:string" />
+      <xs:element name="provincia" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

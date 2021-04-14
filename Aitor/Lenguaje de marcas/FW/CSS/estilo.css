@@ -1,0 +1,90 @@
+*{
+  margin: 0;
+  font-family: arial;
+}
+
+.menu {
+  background-color: #464742;
+  overflow: hidden;
+  background-image: url("../Imagenes/logo.png");
+  background-size: 8vw;
+  background-repeat: no-repeat;
+  background-position: left;
+  padding-left: 9vw;
+
+}
+
+
+.menu a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 1.5em;
+  text-decoration: none;
+  font-size: 1.5vw;
+  border-bottom: 0.3vw solid transparent;
+
+}
+
+
+.menu a:hover {
+
+  color: gray;
+
+}
+
+
+.menu a.active {
+  background-color: #464742;
+  border-bottom: 0.3vw solid white;
+  color: white;
+}
+
+.eslogan{
+  background-image: url("../Imagenes/img1.png");
+  background-size: 19%;
+  background-repeat: no-repeat;
+  background-position: right;
+
+  background-color: silver;
+
+
+  padding-top: 7vw;
+  padding-bottom: 18vw;
+
+  padding-left: 10vw;
+
+}
+
+.eslogan h2{
+  text-align: center;
+  width: 60vw;
+
+  float: left;
+  font-size: 2vw;
+
+
+}
+
+.textoaprender{
+  font-weight: bolder;
+  color: #a73437;
+}
+
+.aprender{
+  background-color: white;
+  margin-left: 25vw;
+  margin-right: 25vw;
+  margin-top: -3vw;
+  padding-top: 2vw;
+  height: 5vw;
+  text-align: center;
+  font-size: 1.3vw;
+
+
+}
+.about{
+  background-color: white;
+
+}

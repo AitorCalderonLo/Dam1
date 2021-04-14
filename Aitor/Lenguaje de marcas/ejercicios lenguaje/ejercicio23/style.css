@@ -1,0 +1,14 @@
+.td1{
+  color: black;
+  background-color: green;
+}
+.td2{
+  color: red;
+}
+.td3{
+  color: blue;
+  background-image: url(image.png);
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: center;
+}

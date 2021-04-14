@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<alumno xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd.xsd">
+    <dni>11111111</dni>
+    <nombre>Iraide Etxeberria</nombre>
+    <direccion>
+        <calle>Kalenagusia</calle>
+        <numero>5</numero>
+        <ciudad>Bilbao</ciudad>
+        <provincia>Bizkaia</provincia>
+    </direccion>
+    <telefono>944000000</telefono>
+</alumno>

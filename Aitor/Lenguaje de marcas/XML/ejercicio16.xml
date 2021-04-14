@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concesionario [
+
+  <!ELEMENT concesionario (coche*)>
+
+  <!ELEMENT coche (descripcion?,consumos*)>
+   <!ELEMENT descripcion (#PCDATA)>
+       <!ELEMENT consumos (consumo, velocidad)>
+          <!ELEMENT consumo (#PCDATA)>
+             <!ELEMENT velocidad (#PCDATA)>
+  
+<!ATTLIST coche modelo ID #REQUIRED>
+<!ATTLIST coche modRelacionado IDREFS #IMPLIED>
+<!ATTLIST coche motorRelModelo IDREFS #IMPLIED>
+
+
+
+]>
+<concesionario>
+  <coche modelo="M556" ></coche>
+  <coche modelo="M555" modRelacionado="M444 M556" motorRelModelo="M556">
+    <descripcion>E ste mo d elo   tiene un mo t or 1 . 9 9 8 c c  16 v. de cuat r o cilindros, que desarrolla  u na poten c ia  d e 1 2 8 CV. Di s pone de cambio manual ... el cons u mo   medio de este mo n o v olum e n es 11   a los   1 0 0 km.  E l p r ec i o b a se es   de
+2. 2 25 . 0 0 0.</descripcion>
+    
+  </coche>
+   <coche modelo="M557" ></coche>
+    <coche modelo="M154" ></coche>
+    <coche modelo="M444" modRelacionado="M555 M154" motorRelModelo="M556">
+    <descripcion>E ste mo d elo   tiene un mo t or 2 . 0 0 0 c c  16 v. de cuat r o cilindros con 128 CV. Dis p one de cambio manual ... el co n su m o me d io de  e ste  mo novol u men es   11 a l o s  10 0 km.  El   precio base   es de   2 .500. 0 0 0 .</descripcion>
+  </coche>
+</concesionario>

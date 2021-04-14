@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio22</title>
+  </head>
+  <body>
+    <form class="" action="index.html" method="post">
+  <fieldset>
+      <table>
+        <tr>
+          <td>
+            <label for="paises">Paises</label>
+          </td>
+          <td>
+            <input list="npais" type="text" id="paises" name="paises" autofocus required autocomplete="on">
+            <datalist id="npais">
+              <option value="Italia">Italia</option>
+              <option value="Francia">Francia</option>
+              <option value="Grecia">Grecia</option>
+              <option value="Noruega">Noruega</option>
+              <option value="Euskadi">Euskadi</option>
+              <option value="Rusia">Rusia</option>
+              <option value="Austria">Austria</option>
+              <option value="Marruecos">Marruecos</option>
+              <option value="Portugal">Portugal</option>
+              <option value="Alemania">Alemania</option>
+              <option value="Suiza">Suiza</option>
+              <option value="China">China</option>
+            </datalist>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="numeros">Numeros</label>
+          </td>
+          <td>
+            <input type="number" id="numeros" min="0" max="10">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="archivo">Archivo</label>
+          </td>
+          <td>
+            <input type="file" id="archivo" multiple>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="contrase">Contraseña</label>
+          </td>
+          <td>
+            <input type="password" id="contrase" pattern="[0-9].{6,}.[A-Z]">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="progreso">Progreso</label>
+          </td>
+          <td>
+            <progress id="progreso" value="0" max="100"></progress>
+          </td>
+        </tr>
+
+      </table>
+      </fieldset>
+    </form>
+  </body>
+</html>

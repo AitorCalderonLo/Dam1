@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE facturas [
+
+  <!ELEMENT facturas (factura*)>
+
+  <!ELEMENT factura EMPTY>
+  
+<!ATTLIST factura n_fac ID #REQUIRED>
+<!ATTLIST factura  n_cli CDATA #REQUIRED>
+<!ATTLIST factura   n_ped CDATA #REQUIRED>
+<!ATTLIST factura  telefono (917776688) #IMPLIED>
+<!ATTLIST factura  fax (917776699) #IMPLIED>
+  <!ATTLIST factura forma_pago ( efectivo | tarjeta | plazos) #REQUIRED>
+    <!ATTLIST factura moneda (euro) #REQUIRED>
+     <!ATTLIST factura iva NMTOKEN #REQUIRED>
+
+
+]>
+<facturas>
+ <factura n_fac="F1" n_cli="C2" n_ped="3232" telefono="917776688" forma_pago="efectivo" moneda="euro" iva="21" />
+</facturas>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<alumnos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd.xsd">
+    <alumno>
+        <dni>11111111</dni>
+        <nombre>Iraide Etxeberria</nombre>
+        <direccion>
+            <calle>Kalenagusia</calle>
+            <numero>5</numero>
+            <ciudad>Bilbao</ciudad>
+            <provincia>Bizkaia</provincia>
+        </direccion>
+        <telefono>944000000</telefono>
+    </alumno>
+    <alumno>
+        <dni>22222222</dni>
+        <nombre>Joseba Mikel Zarraga</nombre>
+        <direccion>
+            <calle>Gorbeia</calle>
+            <numero>75</numero>
+            <ciudad>Artea</ciudad>
+            <provincia>Bizkaia</provincia>
+        </direccion>
+        <movil>645652321</movil>
+        <movil>645612321</movil>
+        <movil>645653321</movil>
+    </alumno>
+</alumnos>

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="es-ES">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio49</title>
+
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", guardarDatos);
+
+    function guardarDatos(){
+        var x = document.getElementsByTagName("a")
+        for(var i = 0; i < x.length; i++)
+        {
+            x[i].addEventListener("click", ocultarMostrar);
+        }
+
+    }
+
+    function ocultarMostrar(){
+      var contenido = this.id.slice(7);
+        if(this.innerHTML === "Ocultar contenidos"){
+            document.getElementById("contenidos_" + contenido).style.display = "none";
+            this.innerHTML = "Mostrar";
+            return;
+        }
+
+        document.getElementById("contenidos_" + contenido).style.display = "";
+        this.innerHTML = "Ocultar contenidos";
+    }
+
+
+  </script>
+</head>
+
+<body>
+
+  <p id="contenidos_1">Una vez aceptamos nuestros límites, vamos más allá de estos (Albert Einstein).</p>
+  <a id="enlace_1" href="#">Ocultar contenidos</a>
+
+  <br />
+
+  <p id="contenidos_2">El optimismo perpetuo es un multiplicador de fuerzas (Colin Powell).</p>
+  <a id="enlace_2" href="#">Ocultar contenidos</a>
+
+  <br />
+
+  <p id="contenidos_3">No es lo que te llamen, es aquello que respondes (W. C. Fields).</p>
+  <a id="enlace_3" href="#">Ocultar contenidos</a>
+
+</body>
+
+</html>

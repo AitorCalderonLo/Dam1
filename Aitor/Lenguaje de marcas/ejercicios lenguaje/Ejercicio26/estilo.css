@@ -1,0 +1,30 @@
+ul {
+  list-style-image: url('images/flecha_inactiva.png');
+  background-color: silver;
+  width: 7em;
+  padding: 0;
+  border: 1px solid black;
+}
+
+ul li a{
+  text-decoration: none;
+  color: black;
+}
+
+li:hover{
+  list-style-image: url('images/flecha_activa.png');
+  background-color: #E4E4E4;
+
+}
+
+ul li {
+ list-style-position:inside;
+  border-bottom: 1px solid black;
+  padding: 0.3em;
+
+}
+
+ul li:last-child {
+  border-bottom: none;
+
+}

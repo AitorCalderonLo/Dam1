@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+  <style type="text/css">
+    @import url("css/calendar-green.css");
+    #sp{
+      display: none;
+    }
+  </style>
+  <script type="text/javascript" src="js/calendar.js" > </script>
+  <script type="text/javascript" src="js/calendar-es.js" ></script>
+  <script type="text/javascript" src="js/calendar-setup.js" ></script>
+  <script type="text/javascript">
+    function mostrar(){
+      var x = document.getElementById('sp');
+      x.style.display = 'inline';
+
+    }
+    window.onload = function() {
+      Calendar.setup({
+        inputField: "fecha",
+        ifFormat: "%A, %d de %B de %Y",
+        daFormat: "%d / %m / %Y",
+        button: "selector",
+        displayArea: "sp"
+      });
+    }
+  </script>
+
+  <title>Calendario</title>
+</head>
+
+<body>
+  <input type="text" name="date" id="fecha" readonly="readonly" size="25"/>
+
+  <img src="img.gif" id="selector" /><br><br>
+  <button type="button" name="mostrar" onclick="mostrar()">Mostrar</button>
+  <br><br><span id="sp"></span>
+</body>
+
+</html>

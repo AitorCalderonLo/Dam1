@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html lang="es-ES">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio54</title>
+  <script src="code.js"></script>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+  <div id="contenido" class="contenido">
+
+    <h2 class="header2">Formulario</h2>
+
+
+  <form method="post" action="#">
+      <ul>
+        <li class="izq">
+          <label class="titulo" for="nombre">Nombre apellidos <span class="obligatorio">*</span></label>
+          <div>
+            <span class="total">
+              <input id="nombre" name="nombre" value="" />
+              <label for="nombre">Nombre</label>
+            </span>
+
+            <span class="total">
+              <input id="ape1" name="ape1" value="" />
+              <label for="ape1">Primer apellido</label>
+            </span>
+
+            <span class="total">
+              <input id="apel2" name="apel2" value="" />
+              <label for="apel2">Segundo apellido</label>
+            </span>
+          </div>
+
+          <p class="ayuda">No te olvides de escribir tu segundo apellido</p>
+        </li>
+
+        <li class="izq">
+          <label class="titulo" for="dire">Dirección <span class="obligatorio">*</span></label>
+
+          <div>
+            <span class="total">
+              <input id="dire" name="dire" value="" />
+              <label for="dire">Calle, numero, piso, puerta</label>
+            </span>
+
+            <span class="tercio">
+              <input id="correo" name="correo" value="" />
+              <label for="correo">Codigo postal</label>
+            </span>
+
+            <span class="mitad">
+              <input id="municipio" name="municipio" value="" />
+              <label for="municipio">Municipio</label>
+            </span>
+
+            <span class="tercio">
+              <select id="zona" name="zona">
+                <option value=""></option>
+                <option value="zona1">Bizkaia</option>
+                <option value="zona1">Gipuzkoa</option>
+                <option value="zona1">Araba</option>
+                <option value="zona1">Nafarroa Garaia</option>
+                <option value="zona1">Behe Nafarroa</option>
+                <option value="zona1">Lapurdi</option>
+                <option value="zona1">Zuberoa</option>
+                <option value="zona1">Kantabria</option>
+                <option value="zona1">Herrioxa</option>
+                <option value="zona1">Kantabria</option>
+                <option value="zona1">Aragoi</option>
+                <option value="zona1">Gaztela</option>
+                <option value="zona1">Akitania</option>
+                <option value="zona1">Midi-Pyrénées</option>
+                <option value="zona1">Pirinio Garaiak
+                <option>
+
+              </select>
+              <label for="zona">Zona</label>
+            </span>
+
+            <span class="mitad">
+              <select id="estado" name="estado">
+                <option value=""></option>
+                <option value="estado1">España</option>
+                <option value="estado2">Francia</option>
+                <option value="estado3">Euskal Herria</option>
+              </select>
+              <label for="estado">Estado</label>
+            </span>
+          </div>
+
+          <p class="ayuda">Para recibir las peticiones debes introducir el correo postal</p>
+        </li>
+
+        <li class="der">
+          <label class="titulo" for="correoe">Correo electronico</label>
+
+          <div>
+            <span class="total">
+              <input id="correoe" name="correoe" value="" />
+            </span>
+          </div>
+
+          <p class="ayuda">Asegurate de que es correcto</p>
+        </li>
+
+        <li class="izq">
+          <label class="titulo" for="telefonoF">Telefono <span class="obligatorio">*</span></label>
+
+          <div>
+            <span class="medio">
+              <input id="telefonoF" name="telefonoF" value="" />
+              <label for="telefonoF">Fijo</label>
+            </span>
+
+            <span class="medio">
+              <input id="Movil" name="Movil" value="" />
+              <label for="Movil">Movil</label>
+            </span>
+          </div>
+
+          <p class="ayuda">Sin prefijo</p>
+        </li>
+
+        <li class="botones">
+          <input id="darAlta" type="submit" value="Dar de alta" />
+        </li>
+
+      </ul>
+    </form>
+</table>
+  </div>
+
+
+</body>
+
+</html>

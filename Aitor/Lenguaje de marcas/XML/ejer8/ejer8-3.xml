@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<figuras>
+  <figura plana="plana">
+    <nombre>cuadrado</nombre>
+    <lados>4</lados>
+  </figura>
+  <figura plana="plana">
+    <nombre>triángulo</nombre>
+    <lados>4</lados>
+  </figura>
+  <figura tridimensional="tridimensional">
+    <nombre>cubo</nombre>
+    <artistas>12</artistas>
+    <caras>6</caras>
+  </figura>
+</figuras>

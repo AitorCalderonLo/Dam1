@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="es-ES">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio50</title>
+   <script src="code.js"></script>
+</head>
+
+<body>
+<h1>Calculadora</h1>
+
+<h4>Dato 1:</h4>
+<input type="text" name="dato1" id="d1" onclick="dato1()" >
+
+
+<h4>Dato 2:</h4>
+<input type="text" name="dato2" id="d2" onclick="dato2()" >
+
+<h4>Resultado:</h4>
+<input type="text" readonly="readonly" id="result" name="resultado" value="">
+<br><br>
+<table>
+
+  <tr>
+    <td>
+
+      <p>
+        Angulo: <br>
+        <input type="radio" name="seleccionable" value="RAD" checked>
+      RAD
+      <input type="radio" name="seleccionable" value="GRAD">
+      GRAD</p>
+    </td>
+  </tr>
+</table>
+<table>
+<tr>
+  <td><button type="button" value="0" onclick="sin()">Sin()</button></td>
+  <td><button type="button" value="0" onclick="cos()">Cos()</button></td>
+  <td><button type="button" value="0" onclick="tan()">Tan()</button></td>
+  <td><button type="button" value="0" onclick="raiz()">Raiz()</button></td>
+  <td></td>
+</tr>
+  <tr>
+    <td><button type="button" value="7" onclick="add('7')">7</button></td>
+    <td><button type="button" value="8" onclick="add('8')">8</button></td>
+    <td><button type="button" value="9" onclick="add('9')">9</button></td>
+    <td><button type="button" value="/" onclick="dividir()">/</button></td>
+    <td><button type="button" value="0" onclick="pi()">Pi</button></td>
+  </tr>
+  <tr>
+    <td><button type="button" value="4" onclick="add('4')">4</button></td>
+    <td><button type="button" value="5" onclick="add('5')">5</button></td>
+    <td><button type="button" value="6" onclick="add('6')">6</button></td>
+    <td><button type="button" value="*" onclick="multiplicar()">*</button></td>
+    <td><button type="button" value="0" onclick="memoria()">M+</button></td>
+  </tr>
+  <tr>
+    <td><button type="button" value="1" onclick="add('1')">1</button></td>
+    <td><button type="button" value="2" onclick="add('2')">2</button></td>
+    <td><button type="button" value="3" onclick="add('3')">3</button></td>
+    <td><button type="button" value="-" onclick="restar()">-</button></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><button type="button" value="0" onclick="add('0')">0</button></td>
+    <td><button type="button" value="." onclick="add('.')">.</button></td>
+    <td><button type="button" value="^" onclick="elevar()">^</button></td>
+    <td><button type="button" value="+" onclick="sumar()">+</button></td>
+    <td><button type="button" value="0" onclick="borrarm()">C</button></td>
+  </tr>
+</table>
+
+
+</body>
+
+</html>

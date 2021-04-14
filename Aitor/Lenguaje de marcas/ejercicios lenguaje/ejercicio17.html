@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>PEDIR OPCION</title>
+  </head>
+    <body>
+    		<form action="mailto:aitor.calderonlo@elorrieta-errekamari.com" method="post" enctype ="text/plain">
+
+        <p>
+
+            <label for="usuario">USUARIO:</label>
+
+            <input type="text" name="usuario" id="usuario" > <br >
+
+            <label for="contr" >CONTRASEÑA:</label><input type="password" name="contr" id="contr" size="6"> <br >
+            <label for="contr" >CONTRASEÑA:</label><input type="password" name="contr" id="contr2" size="6"> <br >
+
+            <label for="socio" >SOCIO:</label> <input type="checkbox" name="socio" id="socio" checked disabled> <br >
+
+            <label  >SEXO:</label>
+
+            <input type="radio" name="genero" value="masculino"  ><strong>Masculino</strong>
+
+            <input type="radio" name="genero" value="femenino"><strong>Femenino</strong><br >
+
+            <label>AFICIONES:</label><br >
+
+            <input type="radio" name="aficion" value="aventura" >Acción<br >
+
+            <input type="radio" name="aficion" value="historioa" >Historia<br >
+
+            <input type="radio" name="aficion" value="ficcion" >Ficción<br >
+
+            <label for="descuento">DESCUENTO:</label>
+
+            <input name ="descuento" id="descuento" value="25%" size="5" readonly> <br >
+
+            <label>ESTUDIOS:</label> <br>
+            <input type="radio" name="estudios" value="secundaria">Secundaria <br>
+            <input type="radio" name="estudios" value="medios">Medios <br>
+            <input type="radio" name="estudios" value="superiores">superiores <br>
+            <input type="radio" name="estudios" value="universitarios">universitarios <br>
+
+
+            <label for="foto">FOTO:</label>
+
+            <input type="file" id="foto" name="foto" accept="application/*" > <br >
+            <br>
+
+            <input type="submit" value="enviar" >
+
+            <input type="reset" value="reset" >
+
+            <input type="button" value="salir" onclick="window.close();">
+
+        </p>
+    </form>
+
+	</body>
+</html>

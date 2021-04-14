@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Ejercicio44</title>
+  <script>
+    function llamar() {
+      var entrada = document.getElementById('nombre').value;
+      factorial(entrada);
+
+    }
+
+
+    function factorial(numero) {
+      
+      var res_fact;
+      if (numero == 0) {
+        res_fact = 1;
+      } else {
+        var prueba = numero-1;
+        res_fact = numero * factorial(prueba);
+      }
+      document.registro.rr.value = res_fact;
+      return res_fact;
+    }
+
+    function obtenerdatos() {
+      var nombre = document.getElementById('nombre').value;
+
+
+      if (isNaN(nombre) == true || nombre.length < 1) {
+        alert("ERROR: introduce un numero");
+      } else {
+        var resultado = "Factorial del numero " + nombre + ": ";
+        var factorial = 1;
+        for (var i = 1; i <= nombre; i++) {
+          factorial = factorial * i;
+          if (i == nombre) {
+            var test = i;
+          } else {
+            var test = i + " * ";
+          }
+
+          resultado = resultado.concat(test);
+        }
+        resultado = resultado.concat(" = " + factorial);
+        if (nombre < 0) {
+          resultado = "Debes introducir un numero positivo."
+          document.registro.nombreobtenido.value = resultado;
+        } else if (nombre == 0) {
+          resultado = "Factorial del numero " + nombre + " = 1";
+          document.registro.nombreobtenido.value = resultado;
+        } else {
+          document.registro.nombreobtenido.value = resultado;
+        }
+
+      }
+
+
+
+
+    }
+  </script>
+</head>
+
+<body>
+  <form name="registro">
+
+    <p>Insertar numero:<input type="text" name="nombre" id="nombre"></p>
+
+    <input type="button" name="btn1" value="Factorial" onclick="obtenerdatos()">
+    <input type="button" name="btn2" value="Factorial recursivo" onclick="llamar()">
+    <br /><br /><br />
+
+
+    <p>Resultado:<input type="text" name="nombreobtenido" id="nombreobtenido" class="nombreobtenido"></p>
+    <br><br>
+    <p>Resultado recursivo:<input type="text" name="rr" id="rr" class="rr"></p>
+
+
+  </form>
+
+
+</body>
+
+</html>

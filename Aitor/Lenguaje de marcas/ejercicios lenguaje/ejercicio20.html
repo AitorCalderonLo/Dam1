@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 20</title>
+  </head>
+  <body>
+    <form class="formulario" action="mailto:aitor.calderonlo@elorrieta-errekamari.com" method="post">
+      <fieldset>
+        <legend>Datos Personales</legend>
+
+      <ul>
+        <li>
+          <label for="edad">Años:</label>
+          <input id="edad" type="number" name="edad" step="1" max="150" min="0">
+        </li>
+        <li>
+          <label>Sexo:</label>
+          <input type="radio" name="sexo" value="Hombre">Masculino
+          <input type="radio" name="sexo" value="Mujer">Femenino
+        </li>
+        <li>
+          <label for="estudios">Estas estudiando:</label>
+          <select id="estudios" name="estudios">
+            <option value="primaria">Primaria</option>
+            <option value="secundaria">Secundaria</option>
+            <option value="bachiller">Bachiller</option>
+            <option value="gradomedio">Ciclo de grado medio</option>
+            <option value="gradosuperior">Ciclo de grado superior</option>
+            <option value="diplomatura">Diplomatura</option>
+            <option value="licenciatura">Licenciatura</option>
+            <option value="doctorado">Doctorado</option>
+          </select>
+        </li>
+      </ul>
+      </fieldset>
+
+
+      <fieldset>
+        <legend>Preguntas generales</legend>
+
+      <ul>
+        <li>
+          <label>¿Tienes ordenador en clase?:</label>
+          <input type="radio" name="tienesorde" value="si">Si
+          <input type="radio" name="tienesorde" value="no">No
+        </li>
+        <li>
+          <label>¿Eres su dueño o es compartido?:</label>
+          <input type="radio" name="dueno" value="dueno">Soy su dueño
+          <input type="radio" name="dueno" value="compartido">Compartido
+        </li>
+        <li><p>En horas de clase:</p></li>
+        <li>  <ul>
+            <li>
+              <label for="ab1">A la semana, ¿cuantas veces enciendes el ordenador?:</label>
+              <input id="ab1" type="number" name="ab1" step="1" max="100" min="0">
+            </li>
+            <li>
+              <label for="ab2">¿Cuantas horas estas al dia delante del ordenador?:</label>
+              <select id="ab2" name="ab2">
+                <option value="1omenos">Una hora o menos</option>
+                <option value="entre1y2">Entre una hora y dos </option>
+                <option value="entre2y3">Entre dos hora y tres</option>
+                <option value="3omas">Tres horas o mas</option>
+              </select>
+            </li>
+          </ul></li>
+        <li><p>En vacaciones:</p></li>
+          <li> <ul>
+            <li>
+              <label for="ab3">A la semana, ¿cuantas veces enciendes el ordenador?:</label>
+              <input id="ab3" type="number" name="ab3" step="1" max="100" min="0">
+            </li>
+            <li>
+              <label for="ab4">¿Cuantas horas estas al dia delante del ordenador?:</label>
+              <select id="ab4" name="ab4">
+                <option value="1omenos">Una hora o menos</option>
+                <option value="entre1y2">Entre una hora y dos </option>
+                <option value="entre2y3">Entre dos hora y tres</option>
+                <option value="3omas">Tres horas o mas</option>
+              </select>
+
+            </li>
+
+          </ul><br></li>
+
+        <li>
+          <label>¿Para que utilizas el ordenador?:</label>
+          <table>
+            <tr>
+              <td><input type="checkbox" name="casilla" value="escribir">Escribir</td>
+              <td><input type="checkbox" name="casilla" value="dibujar">Dibujar</td>
+              <td><input type="checkbox" name="casilla" value="programar">Programar</td>
+              <td><input type="checkbox" name="casilla" value="musica">Musica</td>
+              <td><input type="checkbox" name="casilla" value="fotografia">Fotografia</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="casilla" value="jugar">Jugar</td>
+              <td><input type="checkbox" name="casilla" value="navegar">Navegar</td>
+              <td><input type="checkbox" name="casilla" value="chatear">Chatear</td>
+              <td><input type="checkbox" name="casilla" value="commus">Compartir Musica</td>
+              <td><input type="checkbox" name="casilla" value="compeli">Compartir Peliculas</td>
+            </tr>
+          </table>
+          <br>
+        </li>
+
+        <li>
+          <label>Algunos usos mas (explica brevemente):</label>
+          <input type="text" name="opt1">
+          <input type="text" name="opt2">
+          <input type="text" name="opt3">
+
+        </li>
+      </ul>
+
+      </fieldset>
+
+
+      <fieldset>
+        <legend>Descripcion del ordenador</legend>
+        <ul>
+          <li>
+            <label>Tipo:</label>
+            <input type="radio" name="tipo" value="demesa">De mesa
+            <input type="radio" name="tipo" value="portatil">Portatil
+            <input type="radio" name="tipo" value="demesa">Notebook
+            <input type="radio" name="tipo" value="tablet">Tablet PC
+          </li>
+          <li>
+            <label for="edadpc">Edad:</label>
+            <select id="edadpc" name="edadpc">
+              <option value="unoomenos">Un año o menos</option>
+              <option value="de1a2">De un año a dos</option>
+              <option value="de2a4">De dos años a cuatro</option>
+              <option value="masde4">Mas de cuatro años</option>
+            </select>
+          </li>
+          <li>
+            <input type="radio" name="tipopc" value="clonico">Clonico
+            <input type="radio" name="tipopc" value="marca">De marca
+            <label for="marcapc">&nbsp; > (Indica):</label>
+            <input id="marcapc" type="text" name="marcapc">
+          </li>
+          <li>
+            <label>Procesador:</label>
+            <label for="marcaprocesador">Marca:</label>
+            <select id="marcaprocesador" name="marcaprocesador">
+              <option value="intel">Intel</option>
+              <option value="amd">AMD</option>
+              <option value="otro">Otro</option>
+            </select>
+            <label for="modeloprocesador">- Modelo:</label>
+            <select id="modeloprocesador" name="modeloprocesador">
+              <optgroup label="Intel">
+                <option value="prim">Pentium III o anterior</option>
+                <option value="seg">Pentium IV</option>
+                <option value="ter">Pentium Core 2</option>
+                <option value="cuar">Celeron</option>
+                <option value="otro">Otro</option>
+              </optgroup>
+              <optgroup label="AMD">
+                <option value="amdprim">Athlon XP o anterior</option>
+                <option value="amdseg">Athlon 64</option>
+                <option value="amdter">Athlon 64 X2</option>
+                <option value="amdcuar">Sempron</option>
+                <option value="amdquin">Duon</option>
+                <option value="amdotro">Otro</option>
+              </optgroup>
+              <optgroup label="Otras Marcas">
+                <option value="otro">Otro</option>
+              </optgroup>
+            </select>
+            <label for="velocidadprocesador">- Velocidad:</label>
+            <select id="velocidadprocesador" name="velocidadprocesador">
+              <option value="me15">Menos que 1,5 GHz</option>
+              <option value="ma15">Mas que 1,5 GHz</option>
+              <option value="ma2">Mas que 2 GHz</option>
+              <option value="ma25">Mas que 2,5 GHz</option>
+            </select>
+          </li>
+          <li>
+            <label for="ram">RAM:</label>
+            <select id="ram" class="" name="ram">
+              <option value="menos1gb">Menos de 1 GB</option>
+              <option value="mas1gb">mas de 1 GB</option>
+              <option value="mas2gb">mas de 2 GB</option>
+              <option value="mas4gb">mas de 4 GB</option>
+            </select>
+          </li>
+          <li>
+            <label for="hdd">Disco Duro:</label>
+            <select id="hdd" class="" name="hdd">
+              <option value="menos250">Menos de 250 GB</option>
+              <option value="mas250">mas de 250 GB</option>
+              <option value="mas500">mas de 500 GB</option>
+            </select>
+          </li>
+          <li>
+            <label>CD / DVD:</label>
+            <input type="checkbox" name="cdvd" value="cdrom">CD-ROM
+            <input type="checkbox" name="cdvd" value="cdrw">CD-RW
+            <input type="checkbox" name="dvdrom" value="cdrw">DVD-ROM
+            <input type="checkbox" name="dvdrw" value="cdrw">DVD-RW o/y +RW
+          </li>
+          <li>
+            <label>Pantalla: Tipo</label>
+            <input type="radio" name="tipopantalla" value="crt">CRT -
+            <input type="radio" name="tipopantalla" value="tft">TFT
+
+            <label>Tamaño:</label>
+            <input type="radio" name="tmn" value="m17">Menos de 17" -
+            <input type="radio" name="tmn" value="17">17" -
+            <input type="radio" name="tmn" value="19">19" -
+            <input type="radio" name="tmn" value="m19">Mas de 19"
+          </li>
+          <li>
+            <label for="inet">Internet:</label>
+            <select id="inet" class="" name="inet">
+              <option value="modem">Modem</option>
+              <option value="adsl">ADSL</option>
+              <option value="fibra">Fibre Optica</option>
+              <option value="otro">Otro</option>
+            </select>
+          </li>
+        </ul>
+      </fieldset>
+      <button type="submit" name="button">Enviar</button>
+      <button type="reset" name="Limpiar">Limpiar</button>
+    </form>
+  </body>
+</html>
