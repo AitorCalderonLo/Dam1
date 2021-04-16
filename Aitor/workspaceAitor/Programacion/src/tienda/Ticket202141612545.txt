@@ -1,0 +1,21 @@
+	Shop Name
+	Lorem Ipsum,23
+	Telp. 11223
+
+ ************************* 
+
+ 	CASH RECEIPT 
+
+ ************************* 
+
+Description		Price
+Pincho  		1.75
+Botella 		1.0
+Patatas 		2.2
+Cerveza 		1.5
+
+ ************************* 
+
+Total		6.45
+Cash		10.0
+Change		3.55

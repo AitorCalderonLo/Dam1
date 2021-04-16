@@ -6,8 +6,11 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.Calendar;
 import java.util.Scanner;
 
 public class Main {
@@ -16,6 +19,7 @@ public class Main {
 	static ArrayList<Producto> productos = new ArrayList<Producto>();
 	static ArrayList<Producto> productosSeleccionados = new ArrayList<Producto>();
 	static double total = 0;
+	static double cambioUsuario, resto;
 	static Scanner in = new Scanner(System.in);
 
 	public static void main(String[] args) {
@@ -29,15 +33,79 @@ public class Main {
 			// Insercion de productos en el arrayList Productos
 			creacionProductos();
 
-			// Seleccion de productos por parte del usuario SE ALMACENA EL TOTAL CORRECTAMENTE
+			// Seleccion de productos por parte del usuario SE ALMACENA EL TOTAL
+			// CORRECTAMENTE
 			seleccionDeProductos();
 
-			
-			
+			// Mostrar total al usuario y pedirle el dinero
+			calcularCambio();
+
+			// Crear archivo resumen
+			crearResumen(filePath);
+
 		} catch (IOException ex) {
 			System.err.println("No se puede leer del archivo: " + ex);
 			System.exit(-1);
 		}
+	}
+
+	private static void crearResumen(String filePath) throws IOException {
+		Calendar fecha = Calendar.getInstance();
+
+		String nombre = "Ticket" + fecha.get(Calendar.YEAR) + (fecha.get(Calendar.MONTH) + 1)
+				+ fecha.get(Calendar.DAY_OF_MONTH) + fecha.get(Calendar.HOUR_OF_DAY) + fecha.get(Calendar.MINUTE)
+				+ fecha.get(Calendar.SECOND);
+
+		Path path = Paths.get(filePath.concat("\\src\\tienda\\" + nombre + ".txt"));
+
+		if (!Files.exists(path))
+			Files.createFile(path);
+
+		FileWriter fich = new FileWriter(filePath.concat("\\src\\tienda\\" + nombre + ".txt"));
+
+		fich.write("\t" + datosEmpresa[0] + "\n\t" + datosEmpresa[1] + "\n\t" + datosEmpresa[2]
+				+ "\n\n ************************* \n\n \tCASH RECEIPT \n\n ************************* \n\n"
+				+ "Description\t\tPrice");
+
+		for (int i = 0; i < productosSeleccionados.size(); i++) {
+			fich.write("\n" + productosSeleccionados.get(i).getNombre() + "\t\t"
+					+ productosSeleccionados.get(i).getPrecio());
+		}
+
+		fich.write("\n\n ************************* \n\nTotal\t\t" + total + "\nCash\t\t" + cambioUsuario
+				+ "\nChange\t\t" + resto);
+
+		fich.close();
+
+		System.out.println("\n *** ARCHIVO CREADO CORRECTAMENTE ***");
+	}
+
+	private static void calcularCambio() {
+		System.out.print("\n Coste total de la operacion = " + total + "€ \n Inserte pago del usuario: ");
+		cambioUsuario = leerDouble(total, 9999.99);
+		resto = cambioUsuario - total;
+	}
+
+	public static double leerDouble(double a, double b) {
+		double d = 0;
+		boolean error;
+		do {
+			try {
+				error = false;
+				d = Double.parseDouble(in.nextLine());
+				if (d < a || d > b) {
+					error = true;
+					System.out.print("Error. Debes introducir un número entre " + a + " y " + b + ": ");
+				}
+			} catch (NumberFormatException e) {
+				error = true;
+				System.out.print("Error. Debes introducir un número: ");
+			} catch (Exception e) {
+				error = true;
+				System.out.print("Error. " + e.getMessage() + ". Introduce el número otra vez: ");
+			}
+		} while (error == true);
+		return d;
 	}
 
 	private static void seleccionDeProductos() {
@@ -69,10 +137,10 @@ public class Main {
 
 	private static void creacionProductos() {
 		productos.add(new Producto("Coca Cola", 2.2));
-		productos.add(new Producto("Pincho ", 1.75));
+		productos.add(new Producto("Pincho  ", 1.75));
 		productos.add(new Producto("Botella ", 1));
 		productos.add(new Producto("Patatas ", 2.2));
-		productos.add(new Producto("Cerveza", 1.50));
+		productos.add(new Producto("Cerveza ", 1.50));
 	}
 
 	public static int leerInt(int a, int b) {

@@ -78,7 +78,7 @@ begin
 
 end //
 
-call ModificarSalario(7369, -10);
+
 
 /* 7 */
 
@@ -104,4 +104,80 @@ begin
 end //
 
 call asignarComision(7499);
+
 /* 8 */
+delimiter //
+create function PorcenSalarial(numeroEmpleado int)
+returns double
+reads sql data
+begin
+	declare salarioEmpleado double;
+	declare salarioDepart double;
+	select salario into salarioEmpleado from emple where emp_no = numeroEmpleado;
+    select sum(salario) into salarioDepart from emple where dept_no = (select dept_no from emple where emp_no = numeroEmpleado);
+    return round((salarioEmpleado/salarioDepart)*100,2) ;
+end //
+
+select PorcenSalarial(7839) "Porcentaje";
+
+/* 9 */
+delimiter //
+create procedure ModificarSalariosDepar(numeroDepartamento int, porcentaje double)
+begin
+	declare cantidadTrabajadores int;
+    select count(emp_no) into cantidadTrabajadores from emple where dept_no = numeroDepartamento;
+    if cantidadTrabajadores>=1 then
+    update emple set salario = salario + ((salario * porcentaje) / 100);
+		select concat('Se ha modificado el salario de todos los empleados del dpto. nº ',numeroDepartamento, ' en un ', porcentaje ,'%') Mensaje;
+
+    else
+    	select concat('En el dpto. nº ',numeroDepartamento, ' no trabaja ningún empleado') Mensaje;    
+    end if;
+    
+
+    
+end //
+
+call ModificarSalariosDepar(10,-10);
+
+/* 10 */
+delimiter //
+create procedure MostrarComunidad(nombreComunidadAut varchar(30))
+begin
+	declare numeroProvincias int;
+	declare numeroLocalidades int;
+    
+    if (select id_comunidad from comunidades where nombre = nombreComunidadAut) is not null then
+    
+    select count(n_provincia) into numeroProvincias from provincias where id_comunidad = 
+	(select id_comunidad from comunidades where nombre = nombreComunidadAut);
+    
+    select count(id_localidad) into numeroLocalidades from localidades where n_provincia in 
+    (select n_provincia from provincias where id_comunidad = 
+    (select id_comunidad from comunidades where nombre = nombreComunidadAut) );
+    
+	select concat('La comunidad autonoma ',nombreComunidadAut, ' tiene ',numeroProvincias ,' provincias cuales tienen ',numeroLocalidades ,' Localidades' ) Mensaje;    
+
+    else
+    	select concat('La comunidad autonoma no existe') Mensaje;    
+    end if;
+   
+end //
+
+call MostrarComunidad('a');
+
+/* 11 */
+
+delimiter //
+create function ProvinciaMayor(nombreComunidadAut varchar(30))
+returns varchar(30)
+reads sql data
+begin
+	
+    return (select nombre from provincias where superficie = 
+    (select max(superficie) from provincias where id_comunidad = 
+    (select id_comunidad from comunidades where nombre = nombreComunidadAut )));
+    
+end //
+
+select ProvinciaMayor('galicia') "Provincia con mayor superficie";
