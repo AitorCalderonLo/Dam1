@@ -11,6 +11,8 @@ public class Taxi {
 		this.municipio = municipio;
 		
 	}
+	
+	public Taxi() {}
 
 	public String getMatricula() {
 		return matricula;
