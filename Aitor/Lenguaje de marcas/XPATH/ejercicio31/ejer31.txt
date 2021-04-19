@@ -1,0 +1,5 @@
+1 - /universidad/nombre/text()
+2 - /universidad/pais/text()
+3 - /universidad/carreras/carrera/nombre/text()
+4 - /universidad/carreras/carrera/plan/text()
+5 - 

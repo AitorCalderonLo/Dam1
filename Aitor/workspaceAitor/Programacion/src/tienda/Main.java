@@ -47,6 +47,7 @@ public class Main {
 			System.err.println("No se puede leer del archivo: " + ex);
 			System.exit(-1);
 		}
+		in.close();
 	}
 
 	private static void crearResumen(String filePath) throws IOException {
