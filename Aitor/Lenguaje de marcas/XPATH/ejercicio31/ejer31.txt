@@ -8,4 +8,17 @@
 8 - //carrera[@id="c02"]/centro/text()
 9 - //carrera/subdirector/../nombre/text()
 10 - //alumno/estudios/proyecto/../../nombre/text()
-11 - 
+11 - //carrera[@id=//alumno/estudios/carrera/@codigo]/nombre/text()
+12 - (//alumno[@beca]/nombre) | (//alumno[@beca]/apellido1) | (//alumno[@beca]/apellido2)
+13 - //asignatura[@titulacion="c04"]/nombre/text()
+14 - //asignatura[trimestre=2]/nombre/text()
+15 - //asignatura[creditos_teoricos!=4]/nombre/text()
+16 - //alumno[last()]/estudios/carrera/@codigo
+17 - //alumno[sexo='Mujer']/estudios/asignaturas/asignatura/@codigo
+18 - //alumno[./estudios/asignaturas/asignatura/@codigo="a02"]/nombre/text()
+19 - //carrera[@id = //estudios/carrera/@codigo]/@id
+20 - //alumno[sexo="Hombre"]/apellido1/text()|//alumno[sexo="Hombre"]/apellido2/text()
+21 - //carrera[@id = //alumno[nombre="Víctor Manuel"]/estudios/carrera/@codigo]/nombre/text()
+22 - //asignatura[@id=//alumno[nombre="Luisa"]/estudios/asignaturas/asignatura/@codigo]/nombre/text()
+23 - //alumno[./estudios/carrera/@codigo = //carrera/@id]/apellido1/text()
+24 - //carrera[@id = //alumno/estudios/asignaturas/asignatura[@codigo = //asignatura[nombre="Tecnología de los Alimentos"]]/@id]/nombre/text()

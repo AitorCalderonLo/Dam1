@@ -1,7 +1,7 @@
 1 - /movies/movie[@type="comedy"]/title/text()
 2 - //movie[actor="Nicolas Cage"]/actor/text()
 3 - //movie[actor="Nicolas Cage"]/actor[.!="Nicolas Cage"]/text()
-4 - //movie[@year=1992]/producer/name/text()
+4 - //movie[@year=1992]/producer
 5 - //movie[count(actor)>=3]/title/text()
 6 - //movie[contains(producer,"Wood")]/title/text()
 7 - //movie[contains(producer,substring-after(actor, " "))]/title/text()
