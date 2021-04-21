@@ -2,4 +2,10 @@
 2 - /universidad/pais/text()
 3 - /universidad/carreras/carrera/nombre/text()
 4 - /universidad/carreras/carrera/plan/text()
-5 - 
+5 - //alumno/nombre/text()
+6 - //carrera/@id
+7 - //carrera[@id="c01"]
+8 - //carrera[@id="c02"]/centro/text()
+9 - //carrera/subdirector/../nombre/text()
+10 - //alumno/estudios/proyecto/../../nombre/text()
+11 - 

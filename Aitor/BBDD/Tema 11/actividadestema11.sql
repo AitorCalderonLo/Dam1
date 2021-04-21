@@ -127,7 +127,7 @@ begin
 	declare cantidadTrabajadores int;
     select count(emp_no) into cantidadTrabajadores from emple where dept_no = numeroDepartamento;
     if cantidadTrabajadores>=1 then
-    update emple set salario = salario + ((salario * porcentaje) / 100);
+    update emple set salario = salario + ((salario * porcentaje) / 100) where dept_no = numdep;
 		select concat('Se ha modificado el salario de todos los empleados del dpto. nº ',numeroDepartamento, ' en un ', porcentaje ,'%') Mensaje;
 
     else
@@ -180,4 +180,4 @@ begin
     
 end //
 
-select ProvinciaMayor('galicia') "Provincia con mayor superficie";
+select ProvinciaMayor('pais vasco') "Provincia con mayor superficie";
