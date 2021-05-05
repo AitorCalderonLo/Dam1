@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href="xsl.xsl"?>
+<pension nombre="Hostal Dormir DELUXE">
+    <habitaciones>
+        <habitacion codigo="00H1">
+            <nombre>Bella durmiente</nombre>
+            <ocupacionMaxima>2</ocupacionMaxima>
+            <precios>
+                <alta>229.99</alta>
+                <baja>199.99</baja>
+            </precios>
+        </habitacion>
+        <habitacion codigo="00S1">
+            <nombre>Suite Real</nombre>
+            <ocupacionMaxima>4</ocupacionMaxima>
+            <precios>
+                <alta>439.99</alta>
+                <baja>399.99</baja>
+            </precios>
+        </habitacion>
+        <habitacion codigo="00S2">
+            <nombre>Gran Suite DELUXE</nombre>
+            <ocupacionMaxima>4</ocupacionMaxima>
+            <precios>
+                <alta>579.99</alta>
+                <baja>501.99</baja>
+            </precios>
+        </habitacion>
+    </habitaciones>
+    <ocupaciones>
+        <ocupacion>
+            <nombre dni="11111111H">Mikel Gartzia</nombre>
+            <habitacion>00H1</habitacion>
+            <fechaInicio>2016-12-12</fechaInicio>
+            <diasEstancia>5</diasEstancia>
+        </ocupacion>
+        <ocupacion>
+            <nombre dni="52525252L">Ana Mendia</nombre>
+            <habitacion>00S2</habitacion>
+            <fechaInicio>2016-12-12</fechaInicio>
+            <diasEstancia>2</diasEstancia>
+        </ocupacion>
+        <ocupacion>
+            <nombre dni="45678912K">Joseba Alkorta</nombre>
+            <habitacion>00S1</habitacion>
+            <fechaInicio>2016-12-13</fechaInicio>
+            <diasEstancia>9</diasEstancia>
+        </ocupacion>
+        <ocupacion>
+            <nombre dni="11223344P">Jasone Agirre</nombre>
+            <habitacion>00S2</habitacion>
+            <fechaInicio>2016-12-18</fechaInicio>
+            <diasEstancia>5</diasEstancia>
+        </ocupacion>
+        <ocupacion>
+            <nombre dni="32132145K">Julen Abad</nombre>
+            <habitacion>00S1</habitacion>
+            <fechaInicio>2016-12-23</fechaInicio>
+            <diasEstancia>6</diasEstancia>
+        </ocupacion>
+        <ocupacion>
+            <nombre dni="88888888Z">Patricia Calvo</nombre>
+            <habitacion>00S2</habitacion>
+            <fechaInicio>2016-12-27</fechaInicio>
+            <diasEstancia>3</diasEstancia>
+        </ocupacion>
+    </ocupaciones>
+</pension>

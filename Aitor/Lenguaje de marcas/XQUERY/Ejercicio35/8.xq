@@ -1,0 +1,1 @@
+delete node db:open("Ejercicio35", "bailes.xml")//bailes/baile[nombre="Merengue"]
