@@ -125,5 +125,57 @@ call AñadirLoc2(11, "hkk", 1, 6);
 
 /* 5 */
 /* 6 */
+delimiter //
+create procedure ejer6()
+begin
+	declare nomdep varchar(40);
+	declare cantEmp int;
+    declare salmedio double;
+    declare fin int default 0;
+	declare c cursor for select dnombre,count(emp_no),round(avg(salario),2) from depart natural join
+		emple group by dept_no
+		order by 2 desc;
+		declare continue handler for not found set fin = 2;
+        
+	open c;
+		fetch c into nomdep, cantEmp,salmedio;
+		while fin<2 do
+			select concat (fin ,' - Departartamento ' ,nomdep, ' cantidad de empleados ' , cantemp, ' Salario medio ',salMedio) "Datos";
+			fetch c into nomdep, cantEmp,salmedio;
+            set fin = fin+1;
+		end while;
+	close c;
+
+end; //
+call ejer6();
+
 /* 7 */
+delimiter //
+create procedure ejer7(cantidad int)
+begin
+	declare ape varchar(40);
+    declare ofi enum('EMPLEADO','VENDEDOR','DIRECTOR','ANALISTA','PROGRAMADOR','PRESIDENTE');
+    declare sal float;
+    declare com float;
+	declare fin int default 1;
+
+    
+	declare c cursor for select apellido, oficio, salario, comision from emple
+    order by salario asc
+    limit cantidad;
+
+	declare continue handler for not found set fin = 0;
+    
+    open c;
+		fetch c into ape,ofi,sal,com;
+		while fin=1 do
+			select concat ("Apellido: " ,ape, " Oficio: ", ofi, " Salario: ", sal, " Comision: " ,com) "Datos";
+			fetch c into ape,ofi,sal,com;
+		end while;
+	close c;
+
+
+end; //
+call ejer7(3);
+
 /* 8 */ 
