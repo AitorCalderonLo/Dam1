@@ -123,10 +123,114 @@ after update on emple
 for each row
 begin
 	if old.salario != new.salario then
-		insert into CambiosSalariales values(old.emp_no,old.apellido,old.salario,new.salario,(new.salario - old.salario) 
+		insert into CambiosSalariales values(new.emp_no,new.apellido,old.salario,new.salario,(new.salario - old.salario) 
         / old.salario * 100, current_date());
     end if;
 end;//
 
 update emple set salario = salario + salario * 0.10;
+
+/*EJERCICIO 5*/
+create table comisionesantig(
+	emp_no int primary key,
+    trienios int,
+    plus float
+)
+
+Delimiter //
+create event calcularPlusesTrienios
+on schedule every 3 month starts current_timestamp
+do
+begin
+	declare numeroEmple int;
+    declare fechaAlta date;
+    declare numAnyos float;
+    declare cantTri int;
+    declare fin boolean default 0;
+	declare c cursor for select emp_no, fecha_alt from emple where timestampdiff(year, fecha_alt, current_date()) >= 3;
+    declare continue handler for not found set fin = 1;
+	delete from comisionesantig;
+    open c;
+    fetch c into numeroEmple, fechaAlta;
+    while fin = 0 do
+		set numAnyos = timestampdiff(year, fechaAlta, current_timestamp());
+		if numAnyos >=3 then
+			set cantTri = format(numAnyos / 3,0);
+            insert into comisionesantig values (numeroEmple, cantTri, cantTri*45);
+		end if;
+        fetch c into numeroEmple, fechaAlta;
+    end while;
+    close c;
+end;//
+
+
+/*EJERCICIO 6*/
+
+create table EstadisticasArticulos
+(CodArt char(5) not null,
+DesArt varchar(30) not null,
+PVPArt float,
+UnidadesVendidas int,
+Fecha date);
+
+Delimiter //
+create event generarEstadisticasArt
+on schedule every 1 month starts current_timestamp
+do
+begin
+	declare codigo char(5);
+    declare descripcion varchar(30);
+    declare precio float;
+    declare unidades int;
+    declare fin boolean default 0;
+    declare c cursor for select CodArt, DesArt, PVPArt from articulo;
+    declare continue handler for not found set fin = 1;
+    open c;
+    fetch c into codigo, descripcion, precio;
+    while fin = 0 do
+		select count(CodArt) into unidades from lineapedido where CodArt = codigo;
+        insert into estadisticasarticulos values (codigo, descripcion, precio, unidades, current_date());
+        fetch c into codigo, descripcion, precio;
+    end while;
+    close c;
+end;//
+
+/*EJERCICIO 7*/
+
+create table articulosobsoletos
+(CodArt char(5) not null,
+DesArt varchar(30) not null,
+PVPArt float,
+FecBaja date);
+
+Delimiter //
+create event bajaArticulosObsoletos
+on schedule every 1 month starts current_timestamp
+do
+begin
+	declare codigo char(5);
+    declare descripcion varchar(30);
+    declare precio float;
+    declare fechaUltimo date;
+    declare fin boolean default 0;
+    declare c cursor for select CodArt, DesArt, PVPArt from articulo;
+    declare continue handler for not found set fin = 1;
+    open c;
+    fetch c into codigo, descripcion, precio;
+    while fin = 0 do
+		select Max(fecped) into fechaUltimo from pedido p join lineapedido lp on p.refped = lp.RefPed where lp.CodArt = codigo;
+        if fechaUltimo is null or timestampdiff(year, current_date, fechaUltimo) > 5 then
+			insert into articulosObsoletos values(codigo, descripcion, precio, current_date);
+            delete from articulo where CodArt = codigo;
+            delete from lineapedido where CodArt = codigo;
+        end if;
+        fetch c into codigo, descripcion, precio;
+    end while;
+    close c;
+end;//
+
+
+
+
+
 
