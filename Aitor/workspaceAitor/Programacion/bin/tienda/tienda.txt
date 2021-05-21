@@ -1,0 +1,3 @@
+Nombre=Shop Name
+Direccion=Lorem Ipsum,23
+Telefono=Telp. 11223

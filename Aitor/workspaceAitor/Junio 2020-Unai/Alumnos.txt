@@ -1,0 +1,2 @@
+ALUMNO:2 juan, 2 del 2, M1,g1
+ALUMNO:4 kiki, 4 del 4, M2,g1

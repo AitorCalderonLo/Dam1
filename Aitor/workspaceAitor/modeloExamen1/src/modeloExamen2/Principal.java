@@ -60,7 +60,7 @@ public class Principal {
 
 		while ((linea = buf.readLine()) != null) {
 
-			String[] datos = linea.split(",");
+			String[] datgos = linea.split(",");
 
 			if (datos[0].equalsIgnoreCase("P")) {
 				boolean pulgas = false;
