@@ -1,0 +1,3 @@
+hola,buenos,dias
+que,tal,estas
+yo,bien,gracias
